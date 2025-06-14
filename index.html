@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veo 3 Prompt Generator by Fanzer17</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-title">Veo 3 Prompt Generator by Fanzer17</h1>
+        <div class="controls">
+            <button id="change-style-btn">Change Style</button>
+        </div>
+        <div class="form-container">
+            <div class="input-group">
+                <label for="scene-title">1. Scene title</label>
+                <input type="text" id="scene-title" placeholder="Example: Night bus terminal">
+            </div>
+            <div class="input-group">
+                <label for="character-description">2. Core character description</label>
+                <textarea id="character-description" rows="6" placeholder="Example: A young male vlogger from Maluku, aged 27..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="voice-details">3. Character voice details</label>
+                <textarea id="voice-details" rows="6" placeholder="Example: He speaks with a warm and enthusiastic young male voice..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="character-actions">4. Character Actions</label>
+                <textarea id="character-actions" rows="4" placeholder="Example: Walking around the night bus terminal..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="character-expressions">5. Character expressions</label>
+                <textarea id="character-expressions" rows="3" placeholder="Example: The character shows expressions of awe and enthusiasm..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="setting-time">6. Setting and time</label>
+                <textarea id="setting-time" rows="4" placeholder="Example: Setting: at an intercity bus terminal at night..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="visual-details">7. Additional visual details</label>
+                <textarea id="visual-details-text" rows="3" placeholder="Lighting: natural from streetlights... Video style/art style: cinematic realistic..."></textarea>
+                <label for="camera-movement">Camera Movement</label>
+                <select id="camera-movement">
+                    <option value="360 Orbit">360 Orbit (Orbit 360)</option>
+                    <option value="3D Rotation">3D Rotation (Rotasi 3D)</option>
+                    <option value="Action Run">Action Run (Lari Aksi)</option>
+                    <option value="Agent Reveal">Agent Reveal (Kemunculan Agen)</option>
+                    <option value="Angel Wings">Angel Wings (Sayap Malaikat)</option>
+                    <option value="Arc Left">Arc Left (Busur Kiri)</option>
+                    <option value="Arc Right">Arc Right (Busur Kanan)</option>
+                    <option value="Bloom Mouth">Bloom Mouth (Mulut Merekah)</option>
+                    <option value="Buckle Up">Buckle Up (Kencangkan Sabuk)</option>
+                    <option value="Building Explosion">Building Explosion (Ledakan Gedung)</option>
+                    <option value="Bullet Time">Bullet Time (Waktu Peluru)</option>
+                    <option value="Car Chasing">Car Chasing (Pengejaran Mobil)</option>
+                    <option value="Car Explosion">Car Explosion (Ledakan Mobil)</option>
+                    <option value="Car Grip">Car Grip (Cengkeraman Mobil)</option>
+                    <option value="Catch the pulse">Catch the pulse (Tangkap Denyutnya)</option>
+                    <option value="Crane Down">Crane Down (Derek Turun)</option>
+                    <option value="Crane Over The Head">Crane Over The Head (Derek di Atas Kepala)</option>
+                    <option value="Crane Up">Crane Up (Derek Naik)</option>
+                    <option value="Crash Zoom In">Crash Zoom In (Zoom Cepat Masuk)</option>
+                    <option value="Crash Zoom Out">Crash Zoom Out (Zoom Cepat Keluar)</option>
+                    <option value="Datamosh">Datamosh (Datamosh)</option>
+                    <option value="Dirty Lens">Dirty Lens (Lensa Kotor)</option>
+                    <option value="Disintegration">Disintegration (Disintegrasi)</option>
+                    <option value="Dolly In">Dolly In (Dolly Masuk)</option>
+                    <option value="Dolly Left">Dolly Left (Dolly Kiri)</option>
+                    <option value="Dolly Out">Dolly Out (Dolly Keluar)</option>
+                    <option value="Dolly Right">Dolly Right (Dolly Kanan)</option>
+                    <option value="Dolly Zoom In">Dolly Zoom In (Dolly Zoom Masuk)</option>
+                    <option value="Dolly Zoom Out">Dolly Zoom Out (Dolly Zoom Keluar)</option>
+                    <option value="Double Dolly">Double Dolly (Dolly Ganda)</option>
+                    <option value="Dutch Angle">Dutch Angle (Sudut Belanda)</option>
+                    <option value="Eyes In">Eyes In (Mata Masuk)</option>
+                    <option value="Face Punch">Face Punch (Pukulan Wajah)</option>
+                    <option value="Fisheye">Fisheye (Mata Ikan)</option>
+                    <option value="Floating Fish">Floating Fish (Ikan Mengambang)</option>
+                    <option value="Flood">Flood (Banjir)</option>
+                    <option value="Floral Eyes">Floral Eyes (Mata Bunga)</option>
+                    <option value="Flying">Flying (Terbang)</option>
+                    <option value="Focus Change">Focus Change (Perubahan Fokus)</option>
+                    <option value="FPV Drone">FPV Drone (Drone FPV)</option>
+                    <option value="Garden Bloom">Garden Bloom (Taman Merekah)</option>
+                    <option value="General">General (Umum)</option>
+                    <option value="Glam">Glam (Glamor)</option>
+                    <option value="Glowshift">Glowshift (Pergeseran Cahaya)</option>
+                    <option value="Handheld">Handheld (Genggam)</option>
+                    <option value="Head Explosion">Head Explosion (Ledakan Kepala)</option>
+                    <option value="Head Tracking">Head Tracking (Pelacakan Kepala)</option>
+                    <option value="Hyperlapse">Hyperlapse (Hyperlapse)</option>
+                    <option value="Incline">Incline (Miring)</option>
+                    <option value="Invisible">Invisible (Tak Terlihat)</option>
+                    <option value="Jelly Drift">Jelly Drift (Goyangan Jeli)</option>
+                    <option value="Jib Down">Jib Down (Jib Turun)</option>
+                    <option value="Jib Up">Jib Up (Jib Naik)</option>
+                    <option value="Kiss">Kiss (Cium)</option>
+                    <option value="Lazy Susan">Lazy Susan (Meja Putar)</option>
+                    <option value="Lens Crack">Lens Crack (Lensa Retak)</option>
+                    <option value="Lens Flare">Lens Flare (Suar Lensa)</option>
+                    <option value="Levitation">Levitation (Levitasi)</option>
+                    <option value="Low Shutter">Low Shutter (Rana Rendah)</option>
+                    <option value="Medusa Gorgona">Medusa Gorgona (Medusa Gorgona)</option>
+                    <option value="Melting">Melting (Meleleh)</option>
+                    <option value="Morphskin">Morphskin (Kulit Berubah)</option>
+                    <option value="Mouth In">Mouth In (Mulut Masuk)</option>
+                    <option value="Push To Glass">Push To Glass (Dorong ke Kaca)</option>
+                    <option value="Rap Flex">Rap Flex (Gaya Rap)</option>
+                    <option value="Robo Arm">Robo Arm (Lengan Robot)</option>
+                    <option value="Set on Fire">Set on Fire (Terbakar)</option>
+                    <option value="Skin Surge">Skin Surge (Gelombang Kulit)</option>
+                    <option value="Snorricam">Snorricam (Snorricam)</option>
+                    <option value="Soul Jump">Soul Jump (Lompatan Jiwa)</option>
+                    <option value="Static">Static (Statis)</option>
+                    <option value="Super Dolly In">Super Dolly In (Super Dolly Masuk)</option>
+                    <option value="Super Dolly Out">Super Dolly Out (Super Dolly Keluar)</option>
+                    <option value="Symbiote">Symbiote (Simbiot)</option>
+                    <option value="Tentacles">Tentacles (Tentakel)</option>
+                    <option value="Thunder God">Thunder God (Dewa Petir)</option>
+                    <option value="Tilt Down">Tilt Down (Miring ke Bawah)</option>
+                    <option value="Tilt up">Tilt up (Miring ke Atas)</option>
+                    <option value="Timelapse Human">Timelapse Human (Selang Waktu Manusia)</option>
+                    <option value="Timelapse Landscape">Timelapse Landscape (Selang Waktu Pemandangan)</option>
+                    <option value="Turning Metal">Turning Metal (Logam Berputar)</option>
+                    <option value="Whip Pan">Whip Pan (Whip Pan)</option>
+                    <option value="Wiggle">Wiggle (Bergoyang)</option>
+                    <option value="Wind to Face">Wind to Face (Angin ke Wajah)</option>
+                    <option value="YoYo Zoom">YoYo Zoom (Zoom YoYo)</option>
+                    <option value="Zoom In">Zoom In (Zoom Masuk)</option>
+                    <option value="Zoom Out">Zoom Out (Zoom Keluar)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="atmosphere">8. Overall atmosphere</label>
+                <textarea id="atmosphere" rows="3" placeholder="Example: Busy, lively atmosphere..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="sound-ambience">9. Environmental sound/ambience</label>
+                <textarea id="sound-ambience" rows="3" placeholder="Example: SOUND: Bus engine running..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="dialogue">10. Character dialogue</label>
+                <textarea id="dialogue" rows="4" placeholder="Example: DIALOGUE in Indonesian: Character says..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="negative-prompt">11. Negative Prompt</label>
+                <textarea id="negative-prompt" rows="3" placeholder="Example: Avoid: text on screen, subtitles..."></textarea>
+            </div>
+        </div>
+        <button id="generate-btn">Generate Prompt</button>
+        <div class="results-container">
+            <div class="result-column">
+                <h2>Indonesian Prompt (Editable)</h2>
+                <textarea id="indonesian-prompt" rows="15"></textarea>
+            </div>
+            <div class="result-column">
+                <h2>English Prompt (Final)</h2>
+                <textarea id="english-prompt" rows="15" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

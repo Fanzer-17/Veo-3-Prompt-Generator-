@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --bg-color: #ffffff;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 2rem;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+#main-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+#generate-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.results-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.result-column textarea {
+    width: 100%;
+    height: 300px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Dark theme */
+body.dark-theme {
+    --primary-color: #007bff;
+    --secondary-color: #333;
+    --text-color: #f8f9fa;
+    --bg-color: #222;
+    --border-color: #444;
+}
+
+/* Blue, black, white theme */
+body.blue-black-white-theme {
+    --primary-color: #007bff; /* blue */
+    --secondary-color: #f8f9fa; /* white-ish for inputs */
+    --text-color: #000000; /* black */
+    --bg-color: #ffffff; /* white */
+    --border-color: #ccc;
+}
+
+body.blue-black-white-theme h1,
+body.blue-black-white-theme h2 {
+    color: #000000;
+}
+
+body.blue-black-white-theme button {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.blue-black-white-theme button:hover {
+    background-color: #333;
+} 
